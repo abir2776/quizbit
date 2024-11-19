@@ -51,6 +51,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'quizbit.urls'
+AUTH_USER_MODEL = "core.User"
 
 TEMPLATES = [
     {
