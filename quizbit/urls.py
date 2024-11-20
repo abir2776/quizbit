@@ -21,7 +21,7 @@ schema_view = get_schema_view(
 
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path("admin", admin.site.urls),
     re_path(
         r"^docs/swagger(?P<format>\.json|\.yaml)$",
         schema_view.without_ui(cache_timeout=10),
@@ -53,5 +53,6 @@ urlpatterns = [
         TokenVerifyView.as_view(),
         name="token_verify",
     ),
-    path("api/v1/auth/", include("core.rest.urls.registration")),
+    path("api/v1/auth", include("core.rest.urls.registration")),
+    path("api/v1/quiz", include("quiz_management.rest.urls.quiz")),
 ]

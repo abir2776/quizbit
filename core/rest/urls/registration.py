@@ -4,7 +4,7 @@ from core.rest.views import registration
 
 urlpatterns = [
     path(
-        "register",
+        "/register",
         registration.PublicUserRegistration.as_view(),
         name="user-registration",
     )
